@@ -11,13 +11,17 @@
 module.exports = function(grunt) {
 
   var PREFIX = 'DP.define(function(){\n    return ';
-  var SUFFIX = ';\n});';
+  var SUFFIX = '\n});';
 
   // Please see the Grunt documentation for more information regarding task
   // creation: http://gruntjs.com/creating-tasks
 
   grunt.registerMultiTask('neuron_tpl2mod', 'translate text template to neuron module', function() {
-    
+    var options = this.options({
+      prefix: '',
+      suffix: ''
+    });
+
     // Iterate over all specified file groups.
     this.files.forEach(function(f) {
       // Concat specified files.
@@ -37,10 +41,11 @@ module.exports = function(grunt) {
       var lines = file_content.split("\n");
       var lines_count = lines.length;
 
-      file_content = PREFIX + lines.map(function(line,index){
+      file_content = options.prefix + lines.map(function(line,index){
         var plus = index===lines_count-1 ? "" : "+";
-        return "'" + line.trim().replace(/'/g,"\\'") + "'" + plus;
-      }).join("\n") + SUFFIX;
+        var comma = index===lines_count-1 ? ";" : "";
+        return "'" + line.trim().replace(/'/g,"\\'") + "'" + plus + comma;
+      }).join("\n") + options.suffix;
 
       // Write the destination file.
       grunt.file.write(f.dest, file_content);

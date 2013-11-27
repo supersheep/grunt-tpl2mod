@@ -27,7 +27,7 @@ exports.neuron_tpl2mod = {
     // setup here if necessary
     done();
   },
-  all: function(test) {
+  neuron: function(test) {
     var actual = grunt.file.read('tmp/test');
     var expected = grunt.file.read('test/expected/test');
     test.equal(actual, expected, 'should be ok.');

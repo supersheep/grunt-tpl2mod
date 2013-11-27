@@ -1,23 +1,23 @@
 {
-  "name": "grunt-neuron-tpl2mod",
-  "description": "translate text template to neuron module",
+  "name": "grunt-tpl2mod",
+  "description": "translate text template to javascript module.",
   "version": "0.1.0",
-  "homepage": "https://github.com/supersheep/grunt-neuron-tpl2mod",
+  "homepage": "https://github.com/supersheep/grunt-tpl2mod",
   "author": {
     "name": "supersheep",
     "email": "supersheepxjy@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/supersheep/grunt-neuron-tpl2mod.git"
+    "url": "git://github.com/supersheep/grunt-tpl2mod.git"
   },
   "bugs": {
-    "url": "https://github.com/supersheep/grunt-neuron-tpl2mod/issues"
+    "url": "https://github.com/supersheep/grunt-tpl2mod/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/supersheep/grunt-neuron-tpl2mod/blob/master/LICENSE-MIT"
+      "url": "https://github.com/supersheep/grunt-tpl2mod/blob/master/LICENSE-MIT"
     }
   ],
   "main": "Gruntfile.js",

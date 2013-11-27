@@ -30,7 +30,11 @@ module.exports = function(grunt) {
 
     // Configuration to be run (and then tested).
     neuron_tpl2mod: {
-      all: {
+      neuron: {
+        options:{
+          prefix:"DP.define(function(){\n    return ",
+          suffix:"\n});"
+        },
         files: {
           'tmp/test': ['test/fixtures/test'],
         },
