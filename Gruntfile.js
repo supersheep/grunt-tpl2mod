@@ -29,7 +29,7 @@ module.exports = function(grunt) {
     },
 
     // Configuration to be run (and then tested).
-    neuron_tpl2mod: {
+    tpl2mod: {
       neuron: {
         options:{
           prefix:"DP.define(function(){\n    return ",
@@ -58,7 +58,7 @@ module.exports = function(grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'neuron_tpl2mod', 'nodeunit']);
+  grunt.registerTask('test', ['clean', 'tpl2mod', 'nodeunit']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);

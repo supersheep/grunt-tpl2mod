@@ -16,7 +16,7 @@ module.exports = function(grunt) {
   // Please see the Grunt documentation for more information regarding task
   // creation: http://gruntjs.com/creating-tasks
 
-  grunt.registerMultiTask('neuron_tpl2mod', 'translate text template to neuron module', function() {
+  grunt.registerMultiTask('tpl2mod', 'translate text template to neuron module', function() {
     var options = this.options({
       prefix: '',
       suffix: ''
