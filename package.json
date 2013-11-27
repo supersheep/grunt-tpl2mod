@@ -1,7 +1,7 @@
 {
   "name": "grunt-tpl2mod",
   "description": "translate text template to javascript module.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/supersheep/grunt-tpl2mod",
   "author": {
     "name": "supersheep",
