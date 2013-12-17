@@ -10,9 +10,6 @@
 
 module.exports = function(grunt) {
 
-  var PREFIX = 'DP.define(function(){\n    return ';
-  var SUFFIX = '\n});';
-
   // Please see the Grunt documentation for more information regarding task
   // creation: http://gruntjs.com/creating-tasks
 
