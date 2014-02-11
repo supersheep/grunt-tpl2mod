@@ -8,6 +8,8 @@
 
 'use strict';
 
+var tpl2mod = require("tpl2mod");
+
 module.exports = function(grunt) {
 
   // Please see the Grunt documentation for more information regarding task
@@ -35,14 +37,7 @@ module.exports = function(grunt) {
       if(!src){return false;}
       var file_content = grunt.file.read(src);
 
-      var lines = file_content.split("\n");
-      var lines_count = lines.length;
-
-      file_content = options.prefix + lines.map(function(line,index){
-        var plus = index===lines_count-1 ? "" : "+";
-        var comma = index===lines_count-1 ? ";" : "";
-        return "'" + line.trim().replace(/'/g,"\\'") + "'" + plus + comma;
-      }).join("\n") + options.suffix;
+      file_content = tpl2mod(file_content,options);
 
       // Write the destination file.
       grunt.file.write(f.dest, file_content);

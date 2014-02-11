@@ -33,7 +33,9 @@ module.exports = function(grunt) {
       neuron: {
         options:{
           prefix:"DP.define(function(){\n    return ",
-          suffix:"\n});"
+          suffix:"\n});",
+          trimline:true,
+          remainbreak:false
         },
         files: {
           'tmp/test': ['test/fixtures/test'],
